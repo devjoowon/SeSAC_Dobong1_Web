@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 주석 단축키 ctrl + / -->
+    <!-- live server 단축기 alt + l + o -->
+    <!-- 윗줄 복사 alt + shift + 방향키 -->
+
+    <!-- 오늘의 일기 -->
+    <h2>오늘의 일기</h2>
+    <p>
+        날씨가 흐림~
+        <br/>
+        <br/>
+        띄&nbsp;어&nbsp;&nbsp;&nbsp;쓰기
+    </p>
+    <hr/>
+
+    <!-- 오늘의 할 일 -->
+    <h2>오늘의 할 일</h2>
+    <ul type="circle"> <!-- ul type = "none, disc(default), square, circle" -->
+        <li>집에 가기</li>
+        <li>밥 먹기</li>
+    </ul>
+    <hr/>
+
+    <!-- 카페라떼 만드는 방법 -->
+    <h2>카페라떼 만드는 방법</h2>
+    <ol type="1" reversed start="10">
+        <li><b>우유</b>를 <strong>컵</strong>에 넣습니다.</li>
+        <li><i>얼음</i>을 <em>가득</em> 넣습니다.</li>
+        <li><del>샷</del> 넣기</li>
+        <li><u>끝</u></li>
+    </ol>
+    <hr/>
+
+    <!-- 리스트 안에 리스트 -->
+    <h2>리스트 안에 리스트 넣기</h2>
+    <h3>내가 좋아하는 음식</h3>
+    <ul>
+        <li>양식
+            <ol type="A">
+                <li>핏쟈</li>
+                <li>파스타</li>
+            </ol>
+        </li>
+        <li>한식
+            <ol>
+                <li>비빔밥</li>
+                <li>삼겹살</li>
+            </ol>
+        </li>
+        <li>일식
+            <ol>
+                <li>라멘</li>
+                <li>초밥
+                    <ul>
+                        <li>계란초밥</li>
+                        <li>새우초밥</li>
+                        <li>광어초밥</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ul>
+    <hr/>
+
+    <!-- summary 해보기 -->
+    <h2>summary 태그</h2>
+    <details>
+        <summary>제목</summary>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aliquam cumque optio omnis dolor. Tenetur amet sint accusamus necessitatibus officia libero distinctio, nulla repellendus sequi consequuntur quo. Laudantium, beatae voluptate?
+        <ul>
+            <li>아무 태그나</li>
+            <li>넣어도 숨겨짐</li>
+        </ul>
+    </details>
+    <hr />
+
+    <!-- a태그와 img태그 -->
+    <h2>a태그와 img태그</h2>
+    <img src="https://img-cf.kurly.com/shop/data/goodsview/20230731/gv00000713604_1.jpg" alt="쿠키 사진" width="500" />
+    <br/>
+    <!-- 절대경로 -->
+    <img src="/01_html/img/gosim.png" alt="최고심" width="300" />
+    <!-- 상대경로(나를 기준으로) -->
+    <img src="./img/gosim.png" alt="최고심" width="300" />
+    <br/>
+    <!-- _self는 현재 창에서 열림, _blank는 새 창에서 열림 -->
+    <a href="https://www.naver.com/" target="_self">네이버로 이동</a>
+    <a href="./html_start.html" target="_blank">html_start로 이동</a>
+    <br/>
+
+    <!-- 간단 실습 -->
+    <!-- 사진 저장하고, 사진 눌렀을 때 구글로 이동시키기 -->
+    <a href="https://www.google.com"><img src="./img/gosim.png" alt="최고심-구글이동" width="100" /></a>
+    
+</body>
+</html>
