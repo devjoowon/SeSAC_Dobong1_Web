@@ -1,0 +1,72 @@
+.d-block {
+    display: block;
+    background-color: lavenderblush;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+    margin: 20px; /*상쇄됨*/
+}
+
+.d-inline {
+    display: inline;
+    width: 100px; /*적용안됨*/
+    height: 100px; /*적용안됨*/
+    background-color: lightpink;
+}
+
+.d-inline-block {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    border: 1px solid brown;
+    padding: 15px;
+    margin: 20px; /*상쇄안됨*/
+}
+
+.parent {
+    width: 600px;
+    height: 200px;
+    background-color: red;
+}
+
+.parent > .min {
+    min-width: 400px; /*400px이상을 의미, parent의 width가 600px일 경우 -> 600px*, 400px 이하여도 400px 유지*/
+    height: 100px;
+    background-color: orange;
+}
+
+.parent > .max {
+    max-width: 400px; /*400px이하를 의미, parent의 width가 300px일 경우 -> 300px, 400px 이상이어도 400px 유지*/
+    height: 100px;
+    background-color: pink;
+}
+
+.box {
+    background-color: beige;
+    border: 1px solid black;
+}
+
+.box-px {
+    width: 50px;
+    height: 50px;
+}
+
+.box-view {
+    width: 50vw;
+    height: 50vh;
+}
+
+.box-per {
+    width: 50%;
+    height: 50%;
+}
+
+.rem {
+    font-size: 2rem;
+}
+
+.em {
+    font-size: 2em;
+}
