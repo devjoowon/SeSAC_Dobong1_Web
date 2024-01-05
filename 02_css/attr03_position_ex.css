@@ -1,0 +1,49 @@
+.container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+/* .position-relative {
+    position: relative;
+    left: 50px;
+    top: 30px;
+}
+
+.position-absolute {
+    position: absolute;
+    right: 30px;
+    bottom: 100px;
+}
+
+.position-fixed {
+    position: fixed;
+    right: 100px;
+    top: 100px;
+} */
+
+.container div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.item1 {
+    background-color: aqua;
+    z-index: 1;
+}
+
+.item2 {
+    background-color: palegreen;
+    top: 30px;
+    left: 30px;
+    z-index: 3;
+}
+
+.item3 {
+    background-color: palevioletred;
+    top: 60px;
+    left: 60px;
+    z-index: 2;
+}

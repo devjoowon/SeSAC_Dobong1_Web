@@ -1,0 +1,38 @@
+body {
+    height: 2000px;
+}
+
+.box {
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.background {
+    background: linear-gradient(45deg, black, white)
+}
+
+.background-image {
+    background-image: url('./img/small_img.png');
+
+    /* background-repeat */
+    background-repeat: repeat;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: no-repeat;
+
+    /* background-position */
+    /* center, bottom, left, right, top의 키워드로 지정 가능 */
+    /* background-position: center top; */
+    /* background-position: 100px; */
+
+    /* background-size */
+    background-size: 50px;
+    background-size: 90px 50px;
+    background-size: contain;
+    background-size: cover;
+
+    /* background-attachment */
+    background-attachment: fixed;
+}
