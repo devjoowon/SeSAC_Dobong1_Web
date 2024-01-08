@@ -1,0 +1,30 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 1px solid black;
+}
+
+.box1:hover {
+    width: 200px;
+    transition-duration: 1s;
+}
+
+.box2:hover {
+    transform: skewX(-45deg) translateX(50px);
+    transition-duration: 1s;
+}
+
+.box3:hover {
+    border-radius: 50%;
+    background-color: red;
+    transition-duration: 1s;
+    transform: translateX(500px) rotate(360deg);
+}
+
+.box4:hover {
+    background-color: mediumaquamarine;
+    transition-duration: 1s;
+    transform: translateY(50px) perspective(200px) rotateY(360deg) scale(2);
+    background: yellow;
+}

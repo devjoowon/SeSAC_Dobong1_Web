@@ -1,0 +1,47 @@
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    position: relative;
+
+    animation: ball 3s infinite;
+}
+
+@keyframes ball {
+    0%, 100% {
+        left: 0vh;
+        top: 0vh;
+    }
+
+    25% {
+        left: 200vh;
+        top: 0vh;
+    }
+
+    50% {
+        left: 200vh;
+        top: 80vh;
+    }
+
+    75% {
+        left: 0vh;
+        top: 80vh;
+    }
+}
+
+p {
+    position: fixed;
+    animation: sentence-slide 3s steps(100, end);
+}
+
+@keyframes sentence-slide {
+    from {
+        left: 100%;
+        width: 300%;
+    }
+    to {
+        left: 0%;
+        width: 100%;
+    }
+}
