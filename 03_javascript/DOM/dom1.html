@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="green">1</div>
+        <div class="box" id="red">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <input type="text" name="userName">
+    <input type="text" name="userName">
+
+    <!-- 요소 다루기 -->
+    <div class="parent">
+        Text
+        <div id="two">div 두번째 Text</div>
+        <div>div 세번째 Text</div>
+    </div>
+
+    <script>
+        /* 요소 선택 */
+        // 1. getElementById : id 속성값으로 요소를 선택 (요소 하나만 선택)
+        let dom1 = document.getElementById('green');
+        console.log(dom1);
+
+        // 2. getElementsByClassName : class 속성값으로 요소를 선택
+        // HTMLCollection으로 반환 (태그 요소만 포함)
+        let dom2 = document.getElementsByClassName('box');
+        console.log(dom2);
+        for(let i = 0; i < dom2.length; i++) {
+            console.log(dom2[i]);
+        }
+
+        // 3. getElementsByTagName : 태그 이름으로 요소를 선택
+        // HTMLCollection으로 반환
+        let dom3 = document.getElementsByTagName('div');
+        console.log(dom3);
+
+        // 4. getElementsByName : name 속성값으로 요소를 선택
+        // NodeList로 반환
+        let dom4 = document.getElementsByName('userName');
+        console.log(dom4);
+
+        // 5. querySelector : 선택자를 이용해서 요소를 선택
+        // CSS 선택자와 동일 (class(.)/id(#)/tag(태그이름))
+        let dom5 = document.querySelector('#red');
+        console.log(dom5);
+
+        // 6. querySelectorAll
+        // NodeList로 반환
+        let dom6 = document.querySelectorAll('div');
+        console.log(dom6);
+
+        /* 요소 다루기 */
+        /* 태그의 내부 내용을 변경 */
+        // innerText : 문자열을 넣는거 & 공백 문자 제거
+        // innerHTML : HTML 요소를 넣는거
+        // textContent : 문자열을 넣는거 & 공백 문자 반환
+        let two = document.getElementById('two');
+        // two.innerHTML = '<strong>강조</strong>';
+        // two.innerHTML = '강조';
+        // two.innerText = '     textContent<strong>강조</strong>  .   @';
+        two.textContent = `     textContent<strong>강조</strong>  .   @`;
+        console.log(two.innerText);
+    </script>
+</body>
+</html>
