@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백 지옥 경험하기</title>
+    <style>
+      body {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>배경색이 1초에 한 번씩 변경됩니다.</h1>
+    <script>
+      function bgChange(color) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            document.body.style.backgroundColor = color;
+            resolve();
+          }, 1000);
+        });
+      }
+
+      bgChange("red")
+        .then(() => {
+          return bgChange("orange");
+        })
+        .then(() => {
+          return bgChange("yellow");
+        })
+        .then(() => {
+          return bgChange("green");
+        })
+        .then(() => {
+          return bgChange("blue");
+        })
+        .then(() => {
+          return bgChange("purple");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
