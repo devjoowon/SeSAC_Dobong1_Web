@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title%>(으)로 정보 받기</h1>
+    <div>
+      <span><%= userInfo.name%>님 환영합니다!</span>
+    </div>
+    <div>성별: <span><%= userInfo.sex%></span></div>
+    <div>
+      생년월일: <span><%= userInfo.year%>년</span
+      ><span><%= userInfo.month%></span>월<span><%= userInfo.day%></span>일
+    </div>
+    <div>관심사: <span><%= userInfo.interest%></span></div>
+    <%if(addInfo) {%>
+    <h4>다른 태그 작성해보기</h4>
+    <p>좋아하는 색깔: <span class="color"><%= userInfo.color%></span></p>
+    <p>좋아하는 숫자: <span><%= userInfo.number%></span></p>
+    <%}%>
+
+    <script>
+      const color = document.querySelector(".color");
+      color.style.color = "<%= userInfo.color%>";
+
+      document.addEventListener("DOMContentLoaded");
+    </script>
+  </body>
+</html>
