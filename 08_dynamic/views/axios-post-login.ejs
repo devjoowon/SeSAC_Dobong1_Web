@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <form name="login">
+      <input type="text" name="id" required placeholder="아이디" />
+      <br />
+      <input type="password" name="pw" required placeholder="비밀번호" />
+      <br />
+    </form>
+    <div class="result"></div>
+    <button id="loginButton" type="button">로그인</button>
+    <script>
+      const resultBox = document.querySelector(".result");
+
+      // login 함수를 이벤트 리스너로 등록
+      document
+        .getElementById("loginButton")
+        .addEventListener("click", function () {
+          const form = document.forms["login"];
+          const data = {
+            id: form.id.value,
+            pw: form.pw.value,
+          };
+
+          axios({
+            method: "post",
+            url: "/axiosPostLogin",
+            data: data,
+          }).then(function (res) {
+            if (res.data === "fail") {
+              resultBox.textContent =
+                "아이디 혹은 비밀번호를 잘못 입력하였습니다.";
+              resultBox.style.color = "red";
+            } else {
+              resultBox.textContent = `${res.data.id}님 환영합니다.`;
+              resultBox.style.color = "green";
+            }
+          });
+        });
+    </script>
+  </body>
+</html>
