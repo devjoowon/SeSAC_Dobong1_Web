@@ -13,49 +13,49 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-// /* 1. ajax */
-// // ajax 라우팅
-// app.get("/ajax", (req, res) => {
-//   console.log(req.query);
-//   //   res.send("ajax 응답 완료");
-//   //   res.send({
-//   //     name: req.query.name,
-//   //     gender: req.query.gender,
-//   //   });
-//   res.send(req.query);
-// });
+/* 1. ajax */
+// ajax 라우팅
+app.get("/ajax", (req, res) => {
+  console.log(req.query);
+  //   res.send("ajax 응답 완료");
+  //   res.send({
+  //     name: req.query.name,
+  //     gender: req.query.gender,
+  //   });
+  res.send(req.query);
+});
 
-// app.post("/ajax", (req, res) => {
-//   console.log(req.body); // 어떤 데이터가 들어오는지 확인하는 용도
-//   res.send(req.body);
-// });
+app.post("/ajax", (req, res) => {
+  console.log(req.body); // 어떤 데이터가 들어오는지 확인하는 용도
+  res.send(req.body);
+});
 
-// /* 2. axios */
-// app.get("/axios", (req, res) => {
-//   console.log(req.query);
-//   res.send(req.query);
-// });
+/* 2. axios */
+app.get("/axios", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
 
-// app.post("/axios", (req, res) => {
-//   console.log(req.body);
-//   res.send(req.body);
-// });
+app.post("/axios", (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
 
-// /* 3. fetch */
-// app.get("/fetch", (req, res) => {
-//   console.log(req.query);
-//   res.send(req.query);
-// });
+/* 3. fetch */
+app.get("/fetch", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
 
-// app.post("/fetch", (req, res) => {
-//   console.log(req.body);
-//   res.send(req.body);
-// });
+app.post("/fetch", (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
 
-// /* open api 사용 */
-// app.get("/open-api", (req, res) => {
-//   res.render("api");
-// });
+/* open api 사용 */
+app.get("/open-api", (req, res) => {
+  res.render("api");
+});
 
 /* 실습 1 - axiosGetRegister */
 app.get("/axios-get-register", (req, res) => {
@@ -73,7 +73,7 @@ app.get("/axios-post-login", (req, res) => {
 });
 
 const ID = "joowon";
-const PW = "1234";
+const PW = "1234"; // value는 문자열이기 때문에 문자열과 문자열을 비교해줘야 함                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ㅈ
 
 app.post("/axiosPostLogin", (req, res) => {
   if (ID != req.body.id || PW != req.body.pw) {
