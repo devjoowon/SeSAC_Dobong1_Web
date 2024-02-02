@@ -9,9 +9,8 @@ const path = require("path");
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-app.use("/uploads", express.static(__dirname + "/uploads"));
-app.use("/static", express.static(__dirname + "/public"));
-app.use("/static", express.static(__dirname + "/static"));
+app.use("/uploads", express.static(__dirname + "/uploads")); // result.ejs에서 이 경로로 파일을 찾을 수 있음
+app.use("/static", express.static(__dirname + "/static")); // static이라는 경로를 static이라고 쓸 것임 (앞에가 public이라면 "/public/css/result.css")
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -22,8 +21,8 @@ const upload = multer({
 
 const uploadDetail = multer({
   storage: multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, "uploads/");
+    destination: function (req, file, done) {
+      done(null, "uploads/");
     },
     filename: function (req, file, done) {
       const extension = path.extname(file.originalname);

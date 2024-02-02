@@ -4,13 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마이페이지</title>
-    <link rel="stylesheet" href="../static/css/result.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/result.css" />
   </head>
   <body>
+    <!-- 
+      넘어오는 값들
+      name: userInfo.name,
+      id: userInfo.id,
+      pw: userInfo.pw,
+      age: userInfo.age,
+      imgsrc: req.file.path,
+     -->
     <div class="container">
       <h2><span class="name-title"><%= name%></span>님 마이페이지</h2>
       <div>
-        <img src="<%= imgsrc%>" alt="프로필 사진" class="profile" />
+        <img src="/<%= imgsrc%>" alt="프로필 사진" class="profile" />
       </div>
       <div>
         <div><span>아이디</span> <span><%= id%></span></div>
