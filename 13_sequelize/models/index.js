@@ -18,7 +18,8 @@ db.sequelize = sequelize; // db = {sequelize:sequelize}
 db.Sequelize = Sequelize; // db = {sequelize, Sequelize:Sequelize}
 
 db.Visitor = require("./Visitor")(sequelize, Sequelize);
-// sequelize가 Visitor.js의 Visitor의 Sequelize
+// sequelize가 Visitor.js의 Visitor의 sequelize
 // Sequelize Visitor.js의 Visitor의 DataTypes
+db.User = require("./User")(sequelize, Sequelize);
 
 module.exports = db; // db라는 변수를 내보내기 하는 중

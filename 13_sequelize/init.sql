@@ -15,6 +15,7 @@ INSERT INTO visitor(name, comment) VALUES('박주원', '반가워용');
 
 
 SELECT * FROM visitor;
+SELECT * FROM user;
 
 #########[DCL]#########
 -- ----- 새로운 user 만들기1
