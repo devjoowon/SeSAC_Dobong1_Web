@@ -64,7 +64,7 @@ app.post("/login", (req, res) => {
   // user라는 session 설정
   console.log(req.body); // {id:'', pw:''}
   if (req.body.id === userinfo.userId && req.body.pw === userinfo.userPw) {
-    req.session.user = req.body.id;
+    req.session.user = req.body.id; // 세션 설정
     console.log(req.session);
     /*
     Session {
