@@ -80,5 +80,6 @@ app.post("/token", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`http:localhost:${PORT}`);
+  console.log(`http://localhost:${PORT}`);
+  console.log(`http://101.101.218.5:${PORT}`);
 });
