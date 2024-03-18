@@ -1,0 +1,12 @@
+.PracProps2 {
+  width: 500px;
+  background-color: bisque;
+  text-align: center;
+}
+h1 {
+  color: coral;
+}
+
+.PracProps2 > p {
+  text-align: left;
+}
