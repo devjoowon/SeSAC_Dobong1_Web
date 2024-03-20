@@ -3,6 +3,10 @@ import Alphabet from "./components/Alphabet";
 import ClassState from "./components/ClassState";
 import FunctionState from "./components/FunctionState";
 import PororoObj from "./components/PororoObj";
+import PracMap01 from "./components/PracMap01";
+import PracMap01_byAllie from "./components/PracMap01_byAllie";
+import PracMap02 from "./components/PracMap02";
+import PracMap02_byAllie from "./components/PracMap02_byAllie";
 import PracState from "./components/PracState";
 import PropsMap from "./components/PropsMap";
 // import { FunctionProps, FunctionProps2 } from "./components/FunctionProps";
@@ -24,6 +28,13 @@ function App() {
       <h1>map과 filter 사용</h1>
       {/* <PropsMap arr={dataArr} /> */}
       <Alphabet />
+      <PracMap01 />
+      <hr />
+      <PracMap01_byAllie />
+      <hr />
+      <PracMap02 />
+      <hr />
+      <PracMap02_byAllie />
       {/* <h1>hello, props</h1>
       <ClassProps name="루피" color="pink" nickname="공주" />
       <ClassProps name="뽀로로" color="blue" nickname="사고뭉치" />
