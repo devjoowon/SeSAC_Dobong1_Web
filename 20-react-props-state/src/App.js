@@ -3,16 +3,25 @@ import ClassState from "./components/ClassState";
 import FunctionState from "./components/FunctionState";
 import PororoObj from "./components/PororoObj";
 import PracState from "./components/PracState";
+import PropsMap from "./components/PropsMap";
 // import { FunctionProps, FunctionProps2 } from "./components/FunctionProps";
 // import { PracProps, PracProps2, PracProps3 } from "./components/PracProps";
 import "./PracProps.css";
 
 function App() {
+  const dataArr = [
+    { name: "peach", number: 5, price: 5000 },
+    { name: "banana", number: 1, price: 3000 },
+    { name: "apple", number: 10, price: 7000 },
+    { name: "grape", number: 2, price: 8500 },
+  ];
   // const my_func = () => {
   //   console.log("콘솔 띄우기 성공!");
   // };
   return (
     <div className="App">
+      <h1>map과 filter 사용</h1>
+      <PropsMap arr={dataArr} />
       {/* <h1>hello, props</h1>
       <ClassProps name="루피" color="pink" nickname="공주" />
       <ClassProps name="뽀로로" color="blue" nickname="사고뭉치" />
@@ -39,11 +48,11 @@ function App() {
         text="Practice 컴포넌트에서 넘겨준 text props입니다."
         valid={my_func}
       /> */}
-      <h1>hello, state</h1>
+      {/* <h1>hello, state</h1>
       <ClassState />
       <FunctionState />
       <PracState />
-      <PororoObj />
+      <PororoObj /> */}
     </div>
   );
 }
