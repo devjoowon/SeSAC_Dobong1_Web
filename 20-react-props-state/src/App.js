@@ -1,4 +1,5 @@
 // import { ClassProps, ClassProps2 } from "./components/ClassProps";
+import Alphabet from "./components/Alphabet";
 import ClassState from "./components/ClassState";
 import FunctionState from "./components/FunctionState";
 import PororoObj from "./components/PororoObj";
@@ -21,7 +22,8 @@ function App() {
   return (
     <div className="App">
       <h1>map과 filter 사용</h1>
-      <PropsMap arr={dataArr} />
+      {/* <PropsMap arr={dataArr} /> */}
+      <Alphabet />
       {/* <h1>hello, props</h1>
       <ClassProps name="루피" color="pink" nickname="공주" />
       <ClassProps name="뽀로로" color="blue" nickname="사고뭉치" />
